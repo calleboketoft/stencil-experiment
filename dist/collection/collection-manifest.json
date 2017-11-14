@@ -1,0 +1,75 @@
+{
+  "components": [
+    {
+      "tag": "my-dropdown",
+      "componentClass": "Dropdown",
+      "componentPath": "components/dropdown/dropdown.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/dropdown/dropdown.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "title",
+          "type": "string"
+        }
+      ],
+      "states": [
+        {
+          "name": "toggle"
+        }
+      ],
+      "events": [
+        {
+          "event": "onToggle"
+        }
+      ],
+      "slot": "hasSlots"
+    },
+    {
+      "tag": "my-name",
+      "componentClass": "MyName",
+      "componentPath": "components/my-name/my-name.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/my-name/my-name.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "first",
+          "type": "string"
+        },
+        {
+          "name": "last",
+          "type": "string"
+        }
+      ],
+      "listeners": [
+        {
+          "event": "onToggle",
+          "method": "log",
+          "passive": false,
+          "capture": false
+        }
+      ]
+    }
+  ],
+  "bundles": [
+    {
+      "components": [
+        "my-name"
+      ]
+    }
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.0.8-0",
+    "typescriptVersion": "2.6.1"
+  }
+}
